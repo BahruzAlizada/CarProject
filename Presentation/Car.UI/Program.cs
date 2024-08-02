@@ -1,4 +1,5 @@
 using Car.Domain.Identity;
+using Car.Infrastructure.Registration;
 using Car.Persistence.Concrete;
 using Car.Persistence.Registration;
 using Microsoft.AspNetCore.Identity;
@@ -10,6 +11,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<Context>();
 builder.Services.AddPersistenceServices();
+builder.Services.AddInfrastructureServices();
 
 
 builder.Services.AddIdentity<AppUser, AppRole>(Identityoptions =>

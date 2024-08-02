@@ -9,6 +9,12 @@ namespace Car.Persistence.Registration
     {
         public static void AddPersistenceServices(this IServiceCollection services)
         {
+            services.AddScoped<IMarkaReadRepository,MarkaReadRepository>();
+            services.AddScoped<IMarkaWriteRepository, MarkaWriteRepository>();
+
+            services.AddScoped<ICityReadRepository, CityReadRepository>();
+            services.AddScoped<ICityWriteRepository, CityWriteRepository>();
+
             services.AddScoped<IBanReadRepository, BanReadRepository>();
             services.AddScoped<IBanWriteRepository, BanWriteRepository>();
 
@@ -37,7 +43,13 @@ namespace Car.Persistence.Registration
             services.AddScoped<IPreferenceWriteRepository, PreferenceWriteRepository>();
 
             services.AddScoped<IStatusReadRepository,StatusReadRepository>(); 
-            services.AddScoped<IStatusWriteRepository,StatusWriteRepository>(); 
+            services.AddScoped<IStatusWriteRepository,StatusWriteRepository>();
+
+            services.AddScoped<IExteriorColorReadRepository, ExteriorColorReadRepository>();
+            services.AddScoped<IExteriorColorWriteRepository, ExteriorColorWriteRepository>();
+
+            services.AddScoped<IInteriorColorReadRepository, InteriorColorReadRepository>();
+            services.AddScoped<IInteriorColorWriteRepository, InteriorColorWriteRepository>();
 
         }
     }

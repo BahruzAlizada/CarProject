@@ -5,6 +5,7 @@ namespace Car.Domain.Entities
 {
     public class Category : BaseEntity
     {
+        public string? Image { get; set; }
         [Required(ErrorMessage = "Bu xan boş ola bilməz")]
         public string Name { get; set; }
         public Guid? ParentId { get; set; }

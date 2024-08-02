@@ -84,19 +84,39 @@
                         </a>
                     </li>
 
+                    <li class="menu-header small text-uppercase">
+                        <span class="menu-header-text">Marka və modellər</span>
+                    </li>
+
                     <li class="menu-item">
                         <a asp-controller="Vacancy" asp-action="Index" class="menu-link">
                             <i class="menu-icon tf-icons bx bxs-category"></i>
-                            <div>Kateqoriyalar</div>
+                            <div>Markalar</div>
                         </a>
                     </li>
 
+                    <li class="menu-item">
+                        <a asp-controller="Vacancy" asp-action="Index" class="menu-link">
+                            <i class="menu-icon tf-icons bx bxs-category"></i>
+                            <div>Modellər</div>
+                        </a>
+                    </li>
 
+                    <li class="menu-header small text-uppercase">
+                        <span class="menu-header-text">Banlar</span>
+                    </li>
 
                     <li class="menu-item">
                         <a asp-controller="Bans" asp-action="Index" class="menu-link">
                             <i class="menu-icon tf-icons bx bxs-barcode"></i>
                             <div>Banlar</div>
+                        </a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a asp-controller="Cities" asp-action="Index" class="menu-link">
+                            <i class='menu-icon tf-icons bx bx-current-location'></i>
+                            <div>Şəhərlər</div>
                         </a>
                     </li>
 
@@ -122,6 +142,11 @@
                                 </a>
                             </li>
                             <li class="menu-item">
+                                <a asp-controller="EngineCapacity" asp-action="Index" class="menu-link">
+                                    <div>Mühərrikin həcmi</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
                                 <a asp-controller="Transmitters" asp-action="Index" class="menu-link">
                                     <div>Ötrücü</div>
                                 </a>
@@ -129,6 +154,16 @@
                             <li class="menu-item">
                                 <a asp-controller="Years" asp-action="Index" class="menu-link">
                                     <div>İllər</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a asp-controller="ExteriorColors" asp-action="Index" class="menu-link">
+                                    <div>Xarici Rənglər</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a asp-controller="InteriorColors" asp-action="Index" class="menu-link">
+                                    <div>Daxili rənglər</div>
                                 </a>
                             </li>
                             <li class="menu-item">
