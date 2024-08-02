@@ -1,0 +1,30 @@
+﻿@model EngineType
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Yanacaq növü</h5>
+            </div>
+            <div class="card-body">
+                <form method="post">
+
+                    <div class="mb-3 form-group">
+                        <label asp-for="Name" class="form-label">Yanacaq növü</label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Yarat</button>
+                    <a asp-action="Index" class="btn btn-secondary">Geri qayıt</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
