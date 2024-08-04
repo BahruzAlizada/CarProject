@@ -9,6 +9,7 @@ namespace Car.Application.Mappers.AutoMapper
         public ViewModelMapper()
         {
             CreateMap<Category, MarkaVM>().ReverseMap();
+            CreateMap<Category,ModelVM>().ReverseMap();
         }
     }
 }

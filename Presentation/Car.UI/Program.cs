@@ -1,3 +1,4 @@
+using Car.Application.Mappers.AutoMapper;
 using Car.Domain.Identity;
 using Car.Infrastructure.Registration;
 using Car.Persistence.Concrete;
@@ -24,6 +25,8 @@ builder.Services.AddIdentity<AppUser, AppRole>(Identityoptions =>
     Identityoptions.Lockout.MaxFailedAccessAttempts = 5;
     Identityoptions.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
 }).AddEntityFrameworkStores<Context>().AddDefaultTokenProviders();
+
+builder.Services.AddAutoMapper(typeof(ViewModelMapper));
 
 builder.Services.AddHttpClient();
 

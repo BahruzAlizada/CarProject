@@ -12,7 +12,7 @@ namespace Car.Domain.Entities
         public Category Parent { get; set; }
         public ICollection<Category> ChildCategories { get; set; }
         public bool IsMain { get; set; }
-
+        public bool? Collection { get; set; }
 
         public ICollection<CategoryCar> CategoryCars { get; set; }
     }

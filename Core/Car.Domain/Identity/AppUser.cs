@@ -13,6 +13,9 @@ namespace Car.Domain.Identity
         public bool? IsCompany { get; set; }
         public string UserRole { get; set; }
 
+        public DateTime Created { get; set; } = DateTime.UtcNow.AddHours(4);
+        public bool Status { get; set; } = true;
+
         public ICollection<Entities.Car> Cars { get; set; }
 
     }

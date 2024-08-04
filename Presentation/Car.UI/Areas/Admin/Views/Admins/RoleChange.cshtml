@@ -1,0 +1,37 @@
+﻿@model RoleVM
+
+
+<div class="row">
+    <div class="col-8">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Rol</h5>
+            </div>
+            <div class="card-body">
+                <form method="post">
+
+                    <div class="form-group my-4">
+                        <label>Rolu seç</label>
+                        <select class="form-control" name="role">
+                            @foreach (var role in ViewBag.Roles)
+                            {
+                                if (Model.Name == role)
+                                {
+                                    <option selected value="@role">@role</option>
+                                }
+                                else
+                                {
+                                    <option value="@role">@role</option>
+                                }
+
+                            }
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Dəyiş</button>
+                    <a asp-action="Index" class="btn btn-secondary">Geri qayıt</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

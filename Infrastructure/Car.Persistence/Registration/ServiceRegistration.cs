@@ -1,4 +1,5 @@
 ﻿using Car.Application.Abstract;
+using Car.Application.Abstract.Model;
 using Car.Persistence.EntityFramework;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -11,6 +12,9 @@ namespace Car.Persistence.Registration
         {
             services.AddScoped<IMarkaReadRepository,MarkaReadRepository>();
             services.AddScoped<IMarkaWriteRepository, MarkaWriteRepository>();
+
+            services.AddScoped<IModelReadRepository, ModelReadRepository>();
+            services.AddScoped<IModelWriteRepository, ModelWriteRepository>();
 
             services.AddScoped<ICityReadRepository, CityReadRepository>();
             services.AddScoped<ICityWriteRepository, CityWriteRepository>();
