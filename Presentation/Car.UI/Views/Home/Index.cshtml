@@ -1,8 +1,114 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model HomeVM
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<div class="container">
+
+<div class="row">
+
+	        <form method="get">
+            <!--Filter Start-->
+            <div class="my-3" id="filterOptions">
+
+                <div class="row g-2">
+
+
+                    <div class="col-md-6">
+                            <select class="form-select" name="typeId" aria-label="Default select example">
+                                <option selected>Marka</option>
+                                @foreach (Category marka in Model.Markas)
+                                {
+                                    <option value="@marka.Id">@marka.Name</option>
+                                }
+                            </select>
+                        </div>
+
+                    <div class="col-md-6">
+                        <select class="form-select" name="catId" aria-label="Default select example">
+                            <option selected>Model</option>
+                            @foreach (Category modell in Model.Models)
+                            {
+                                <option value="@modell.Id">@modell.Name</option>
+                            }
+                        </select>
+                    </div>
+
+
+                    <div class="d-flex col-md-6">
+
+                        <div class="col-md-6 pe-1">
+                            <select class="form-select" name="catId" aria-label="Default select example">
+                                <option selected>Ban</option>
+                                @foreach (Ban ban in Model.Bans)
+                                {
+                                    <option value="@ban.Id">@ban.Name</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="col-md-6 pe-1">
+                            <select class="form-select" name="typeId" aria-label="Default select example">
+                                <option selected>İl, min</option>
+                                @foreach (Year year in Model.Years)
+                                {
+                                    <option value="@year.Id">@year.Yearr</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="col-md-6 ps-1">
+                            <select class="form-select" name="typeId" aria-label="Default select example">
+                                <option selected>maks</option>
+                                @foreach (Year year in Model.Years)
+                                {
+                                    <option value="@year.Id">@year.Yearr</option>
+                                }
+                            </select>
+                        </div>
+                       
+
+                    </div>
+
+                    <div class="d-flex col-md-6">
+
+
+                        <div class="col-md-3 pe-1">
+                            <input name="pricemin" class="form-control" placeholder="Qiymət, min" />
+                        </div>
+
+                        <div class="col-md-3 ps-1">
+                            <input name="pricemax" class="form-control" placeholder="maks" />
+                        </div>
+
+                        <div class="col-md-3 ps-1">
+                            <select class="form-select" name="typeId" aria-label="Default select example">
+                                <option selected>AZN</option>
+                                <option selected>USD</option>
+                                <option selected>EUR</option>
+                            </select>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="row g-2 my-2">
+
+                    
+
+                    
+                    <div class="search-finish">
+                        <a style="color:red; margin-right:10px;">Sıfırla</a>
+                        <a style="color:#4B0082;">Daha Çox <i class='bx bx-chevron-down'></i> </a>
+                    </div>
+                        <button class="btn btn-outline-success">Elanları göstər</button>
+                    
+                </div>
+
+            </div>
+            <!--Filter End-->
+        </form>
+
+</div>
+
 </div>

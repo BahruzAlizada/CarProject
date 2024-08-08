@@ -34,6 +34,7 @@
     <Folder Include="wwwroot\admin\assets\img\exteriorcolor\" />
     <Folder Include="wwwroot\admin\assets\img\interiorcolor\" />
     <Folder Include="wwwroot\admin\assets\img\marka\" />
+    <Folder Include="wwwroot\admin\assets\img\company\" />
   </ItemGroup>
 
 </Project>

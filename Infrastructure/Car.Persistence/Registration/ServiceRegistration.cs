@@ -22,6 +22,9 @@ namespace Car.Persistence.Registration
             services.AddScoped<IBanReadRepository, BanReadRepository>();
             services.AddScoped<IBanWriteRepository, BanWriteRepository>();
 
+            services.AddScoped<ICarReadRepository, CarReadRepository>();
+            services.AddScoped<ICarWriteRepository, CarWriteRepository>();
+
             services.AddScoped<IEngineTypeReadRepository,EngineTypeReadRepository>();
             services.AddScoped<IEngineTypeWriteRepository,EngineTypeWriteRepository>();
 

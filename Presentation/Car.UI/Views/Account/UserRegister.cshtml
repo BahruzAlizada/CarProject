@@ -1,0 +1,85 @@
+﻿@model RegisterVM
+
+
+﻿@{
+    ViewData["Title"] = "Qeydiyyatdan keç";
+    Layout = "_LayoutLogin";
+}
+<div class="container-xxl">
+    <div class="authentication-wrapper authentication-basic container-p-y">
+        <div class="authentication-inner">
+            <!-- Register -->
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="mb-2" style="text-align:center; padding:10px 0;">Xoş gəlmisiniz 👋</h4>
+                    
+                    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+
+                    <form method="post" >
+
+                        <div class="mb-3">
+                            <label asp-for="Email" class="form-label">Email</label>
+                            <input asp-for="Email" class="form-control" />
+                            <span class="text-danger" asp-validation-for="Email"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Name" class="form-label">Ad və soyad</label>
+                            <input asp-for="Name" class="form-control" />
+                            <span class="text-danger" asp-validation-for="Name"></span>
+                        </div>
+
+                        <div class="mb-3 form-password-toggle">
+                            <div class="d-flex justify-content-between">
+                                <label asp-for="Password" class="form-label" for="password">Şifrə</label>
+                            </div>
+                            <div class="input-group input-group-merge">
+                                <input asp-for="Password"
+                                       class="form-control"
+                                       aria-describedby="password" />
+                                <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                            </div>
+                            <span class="text-danger" asp-validation-for="Password"></span>
+                        </div>
+
+                        <div class="mb-3 form-password-toggle">
+                            <div class="d-flex justify-content-between">
+                                <label asp-for="CheckPassword" class="form-label" for="password">Şifrənin Təkrarı</label>
+                            </div>
+                            <div class="input-group input-group-merge">
+                                <input asp-for="CheckPassword"
+                                       class="form-control"
+                                       aria-describedby="password" />
+                                <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                            </div>
+                            <span class="text-danger" asp-validation-for="CheckPassword"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input asp-for="IsRemember" class="form-check-input" type="checkbox" id="remember-me" />
+                                <label asp-for="IsRemember" class="form-check-label" for="remember-me"> Məni Xatırla </label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <button class="btn btn-primary d-grid w-100" type="submit">Qeydiyyatdan keç</button>
+                            <a class="btn btn-secondary my-2 w-100" asp-controller="Home" asp-action="Index">Ana səhifəyə qayıt</a>
+                        </div>
+                    </form>
+                    <p class="text-center">
+                        <span>Zatən bir hesabım var?</span>
+                        <a asp-controller="Account" asp-action="Login">
+                            <span>Daxil ol</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <!-- /Register -->
+        </div>
+    </div>
+</div>
+<!-- / Content -->
+@section ScriptLogin {
+    <partial name="_ValidationScriptsPartial" />
+}
